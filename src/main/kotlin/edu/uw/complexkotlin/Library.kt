@@ -22,6 +22,18 @@ val fizzbuzz: (IntRange) -> String = { numbers ->
     }
  }
 
+ val doh: (IntRange) -> String = { numbers ->
+    numbers.map { num ->
+        if (num % 7 == 0) {
+            "DOH!"
+        } else {
+            ""
+        }
+    }.fold("") {
+        acc, str -> acc + str
+    }
+ }
+
 fun fizzbuzzgen(divisors: Map<Int, String>): (IntRange) -> String {
     return { numbers ->
         numbers.map { num ->

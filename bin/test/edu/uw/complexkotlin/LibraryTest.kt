@@ -33,6 +33,20 @@ class LibraryTest {
         assertEquals("FIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZFIZZBUZZFIZZFIZZBUZZ", fizzbuzz(1..100))
     }
 
+    // Doh Tests
+    @Test fun dohToTwentyEight() {
+        assertEquals("DOH!DOH!DOH!DOH!", doh(1..28))
+    }
+
+    @Test fun dohToFifteen() {
+        assertEquals("DOH!DOH!", doh(1..15))
+    }
+
+    @Test fun dohToSeventy() {
+        assertEquals("DOH!DOH!DOH!DOH!DOH!DOH!DOH!DOH!DOH!DOH!", doh(1..70))
+    }
+
+    // Fizzbuzzgen Tests
     @Test fun fizzbuzzgenToFifteen() {
        val fb = fizzbuzzgen(mapOf(3 to "FIZZ", 5 to "BUZZ"))
        assertEquals("FIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZ", fb(1..15))
@@ -41,6 +55,11 @@ class LibraryTest {
     @Test fun fizzbuzzgenToTwenty() {
         val fb = fizzbuzzgen(mapOf(4 to "FOUR", 5 to "FIVE"))
         assertEquals("FOURFIVEFOURFIVEFOURFIVEFOURFOURFIVE", fb(1..20))
+    }
+
+    @Test fun fizzbuzzgenToThirty() {
+        val fb = fizzbuzzgen(mapOf(3 to "FIZZ", 10 to "BUZZ"))
+        assertEquals("FIZZFIZZFIZZBUZZFIZZFIZZFIZZBUZZFIZZFIZZFIZZFIZZBUZZ", fb(1..30))
     }
 
     @Test fun r1Test() {
